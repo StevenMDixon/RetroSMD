@@ -6,7 +6,7 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-FROM ubuntu:latest
+FROM ubuntu-latest
 Run apt-get update
 Run apt-get install nodejs
 
