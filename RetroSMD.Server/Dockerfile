@@ -6,14 +6,10 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-FROM ubuntu:latest
-RUN apt-get install -y \
-  nodejs
-
-FROM node:22-alpine
-
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
+RUN apt-get install -y \
+  nodejs
 WORKDIR /src
 COPY ["RetroSMD.Server/RetroSMD.Server.csproj", "RetroSMD.Server/"]
 RUN dotnet restore "./RetroSMD.Server/RetroSMD.Server.csproj"
