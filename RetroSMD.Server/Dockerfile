@@ -10,7 +10,7 @@ FROM ubuntu:latest
 RUN apt-get install -y \
   nodejs
 
-FROM library/nodejs 
+FROM node:22-alpine
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
