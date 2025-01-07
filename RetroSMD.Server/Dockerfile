@@ -6,10 +6,9 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-
+RUN npm i -g n && n lts && npm i -g npm@latest
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-RUN apt-get install -y nodejs
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["RetroSMD.Server/RetroSMD.Server.csproj", "RetroSMD.Server/"]
