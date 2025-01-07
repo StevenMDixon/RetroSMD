@@ -1,0 +1,6 @@
+@RetroSMD.Server_HostAddress = http://localhost:5064
+
+GET {{RetroSMD.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
