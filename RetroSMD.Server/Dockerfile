@@ -10,7 +10,7 @@ FROM ubuntu-latest
 RUN apt-get install -y \
   nodejs
 
-FROM NodeJS 
+FROM library/NodeJS 
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
