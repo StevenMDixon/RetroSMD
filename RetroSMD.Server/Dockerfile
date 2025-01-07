@@ -8,6 +8,7 @@ EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
 RUN apt-get install -y \
   nodejs
 WORKDIR /src
