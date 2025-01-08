@@ -8,10 +8,10 @@ EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
-RUN apt-get update
+RUN apt-get update && \
+      apt-get -y install sudo
 RUN curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-RUN apt-get install -y \
-  nodejs
+RUN apt-get install -y nodejs
 WORKDIR /src
 COPY ["RetroSMD.Server/RetroSMD.Server.csproj", "RetroSMD.Server/"]
 RUN dotnet restore "./RetroSMD.Server/RetroSMD.Server.csproj"
