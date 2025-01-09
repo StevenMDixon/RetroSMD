@@ -2,30 +2,28 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-    const [forecasts, setForecasts] = useState();
+    const [quotes, setQuotes] = useState();
 
     useEffect(() => {
         populateWeatherData();
     }, []);
 
-    const contents = forecasts === undefined
+    const contents = quotes === undefined
         ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
         : <table className="table table-striped" aria-labelledby="tableLabel">
             <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Year</th>
                 </tr>
             </thead>
             <tbody>
-                {forecasts.map(forecast =>
-                    <tr key={forecast.date}>
-                        <td>{forecast.date}</td>
-                        <td>{forecast.temperatureC}</td>
-                        <td>{forecast.temperatureF}</td>
-                        <td>{forecast.summary}</td>
+                {quotes.map(quote =>
+                    <tr key={quote.brand}>
+                        <td>{quote.brand}</td>
+                        <td>{quote.model}</td>
+                        <td>{quote.year}</td>
                     </tr>
                 )}
             </tbody>
@@ -33,16 +31,16 @@ function App() {
 
     return (
         <div>
-            <h1 id="tableLabel">Weather forecast</h1>
+            <h1 id="tableLabel">Cars</h1>
             <p>This component demonstrates fetching data from the server.</p>
             {contents}
         </div>
     );
     
     async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
+        const response = await fetch('GetQuotes');
         const data = await response.json();
-        setForecasts(data);
+        setQuotes(data);
     }
 }
 
