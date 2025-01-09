@@ -13,6 +13,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var c = builder.Configuration.GetConnectionString("DatabaseConnection");
+if (c is null)
+{
+    c = Environment.GetEnvironmentVariable("DatabaseConnection");
+}
 
 builder.Services.AddDbContext<DatabaseContext>(opt =>
     opt.UseNpgsql(c));
