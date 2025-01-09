@@ -1,4 +1,4 @@
-namespace RetroSMD.Server
+namespace RetroSMD.Server.Models
 {
     public class WeatherForecast
     {

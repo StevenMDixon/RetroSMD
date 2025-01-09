@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using RetroSMD.Server.Models;
 
 namespace RetroSMD.Server.Controllers
 {

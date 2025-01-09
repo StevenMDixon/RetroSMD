@@ -1,6 +1,3 @@
-using Microsoft.Extensions.Hosting;
-using System.Collections.Generic;
-using System.Reflection.Metadata;
 using Microsoft.EntityFrameworkCore;
 using RetroSMD.Server.Context;
 
@@ -17,8 +14,6 @@ if (c is null || c == string.Empty)
 {
     c = Environment.GetEnvironmentVariable("DatabaseConnection");
 }
-
-Console.WriteLine(c);
 
 builder.Services.AddDbContext<DatabaseContext>(opt =>
     opt.UseNpgsql(c));
