@@ -18,6 +18,8 @@ if (c is null || c == string.Empty)
     c = Environment.GetEnvironmentVariable("DatabaseConnection");
 }
 
+Console.WriteLine(c);
+
 builder.Services.AddDbContext<DatabaseContext>(opt =>
     opt.UseNpgsql(c));
 
