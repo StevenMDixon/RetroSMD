@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var c = builder.Configuration.GetConnectionString("DatabaseConnection");
-if (c is null)
+if (c is null || c == string.Empty)
 {
     c = Environment.GetEnvironmentVariable("DatabaseConnection");
 }
