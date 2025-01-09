@@ -14,7 +14,7 @@ function App() {
         <Router>
             <Routes >
                 <Route path="/forecast" element ={ <Forecast /> } />
-                <Route path="/car" element ={ <Car /> } />
+                <Route path="/carinfo" element ={ <Car /> } />
             </Routes >
         </Router>
     );

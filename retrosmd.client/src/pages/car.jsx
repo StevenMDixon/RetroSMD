@@ -38,7 +38,7 @@ function Forecast() {
     );
 
     async function populateCarData() {
-        const response = await fetch('api/quote');
+        const response = await fetch('/quote');
         if (response.status == 200) {
             const data = await response.json();
             setQuotes(data);
