@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RetroSMD.Server.Context;
+using RetroSMD.Server.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,14 +10,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var c = builder.Configuration.GetConnectionString("DatabaseConnection");
-if (c is null || c == string.Empty)
+string? dbConnectionString = builder.Configuration.GetConnectionString("DatabaseConnection");
+if (dbConnectionString is null || dbConnectionString == string.Empty)
 {
-    c = Environment.GetEnvironmentVariable("DatabaseConnection");
+    dbConnectionString = Environment.GetEnvironmentVariable("DatabaseConnection");
 }
 
-builder.Services.AddDbContext<DatabaseContext>(opt =>
-    opt.UseNpgsql(c));
+builder.Services.AddDbContext<DatabaseContext>(opt => opt.UseNpgsql(dbConnectionString));
 
 var app = builder.Build();
 

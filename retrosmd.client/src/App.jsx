@@ -1,6 +1,5 @@
 import './App.css';
-import Forecast from './pages/forecast';
-import Car from './pages/car'
+import Quote from './pages/quote'
 import {
     BrowserRouter as Router,
     Routes,
@@ -13,8 +12,7 @@ function App() {
     return (
         <Router>
             <Routes >
-                <Route path="/forecast" element ={ <Forecast /> } />
-                <Route path="/carinfo" element ={ <Car /> } />
+                <Route path="/quote" element={<Quote /> } />
             </Routes >
         </Router>
     );
