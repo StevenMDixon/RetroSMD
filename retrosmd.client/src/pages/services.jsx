@@ -1,11 +1,11 @@
 import '../App.css';
 
-function About() {
+function Services() {
     return (
         <div>
-            <p>About RetroSMD</p>
+            <p>Services</p>
         </div>
     );
 }
 
-export default About;
+export default Services;

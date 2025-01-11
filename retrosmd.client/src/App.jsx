@@ -1,5 +1,5 @@
 import './App.css';
-import Quote from './pages/quote'
+import { Quote, Home, Services, Payment, About} from './pages/'
 import {
     BrowserRouter as Router,
     Routes,
@@ -12,7 +12,11 @@ function App() {
     return (
         <Router>
             <Routes >
-                <Route path="/quote" element={<Quote /> } />
+                <Route path="/Quote" element={<Quote />} />
+                <Route path="/Services" element={<Services />} />
+                <Route path="/Pay" element={<Payment />} />
+                <Route path="/About" element={<About />} />
+                <Route path="/" element={<Home />} />
             </Routes >
         </Router>
     );
