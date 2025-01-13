@@ -1,23 +1,28 @@
-import './App.css';
-import { Quote, Home, Services, Payment, About} from './pages/'
+import './styles/App.css';
+
 import {
     BrowserRouter as Router,
     Routes,
     Route
 } from "react-router-dom";
+import { Quote, Home, Services, Payment, About, OrderDetails } from './pages/'
+import Header from './modules/header';
 
 function App() {
-    
-
     return (
         <Router>
-            <Routes >
+            <div className="App">
+            <Header />
+                <Routes >
+                <Route path="/" element={<Home />} />
                 <Route path="/Quote" element={<Quote />} />
                 <Route path="/Services" element={<Services />} />
-                <Route path="/Pay" element={<Payment />} />
                 <Route path="/About" element={<About />} />
-                <Route path="/" element={<Home />} />
+                <Route path="/Pay" element={<Payment />} />
+                <Route path="/Order" element={<OrderDetails />} />
+                
             </Routes >
+        </div>
         </Router>
     );
 }

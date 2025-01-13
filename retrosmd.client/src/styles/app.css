@@ -2,7 +2,7 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 th, td {
@@ -13,3 +13,9 @@ th, td {
 a {
     display: block
 }
+
+/*
+
+    Hex Codes: #2A2A42, #E93F25, #545F95, #D0DEC7, #F7DF95
+
+*/

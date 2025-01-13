@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../App.css';
+import classes from '../styles/quote.module.css';
 
 function Quote() {
     const [quotes, setQuotes] = useState();
@@ -13,7 +13,7 @@ function Quote() {
         : <p></p>
 
     return (
-        <div>
+        <div className={`${classes.quotecontent}`}>
             <h1 id="tableLabel">Quotes</h1>
             <p>This component demonstrates fetching data from a database.</p>
             {contents}

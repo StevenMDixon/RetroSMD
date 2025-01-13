@@ -1,4 +1,4 @@
-import '../App.css';
+import classes from '../styles/payment.module.css';
 import { useSearchParams } from 'react-router-dom';
 function Payment() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -8,7 +8,7 @@ function Payment() {
     //setSearchParams({ myParam: 'myValue' });
 
     return (
-        <div>
+        <div className={ `${classes.paymentcontent}`} >
             <p>Payments will be made here.</p>
             <p>You need to pay {myParam}</p>
         </div>
