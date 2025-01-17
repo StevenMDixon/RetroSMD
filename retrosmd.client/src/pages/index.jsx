@@ -3,7 +3,7 @@ import Home from './home'
 import Services from './services'
 import Payment from './payment'
 import About from './about'
-import OrderDetails from './orderDetails'
+import OrderDetails from './orderdetails'
 
 export {
         Quote,
