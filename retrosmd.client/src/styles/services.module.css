@@ -1,0 +1,53 @@
+.ServiceCard:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.ServiceCard:nth-child(odd) {
+    flex-direction: row;
+}
+
+.ServiceCard {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.ServiceCardTitle {
+    font-size: 1.2rem;
+    font-family: Signika-Bold;
+    font-weight: bold;
+}
+
+.ServiceCardContent  {
+    flex-basis: 4;
+}
+
+.ServiceCardImage {
+    flex-basis: 1;
+}
+
+.ServiceCardImage:nth-child(even) {
+    padding-right: 1em;
+}
+
+.ServiceCardImage:nth-child(oedd) {
+    padding-left: 1em;
+}
+
+.ServiceCardImage img {
+        max-width: 200px;
+        height: 100%;
+    }
+
+.RepairCard {
+}
+
+.Consoles {
+    display: flex;
+    font-size: .8em;
+}
+
+.Consoles li {
+    padding: 0px;
+    margin: 0px;
+}
