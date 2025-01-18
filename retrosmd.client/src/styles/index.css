@@ -20,5 +20,5 @@ body {
 @font-face {
     font-family: Signika-Bold;
     font-weight: bold;
-    src: url("../assets/signika/Signika-Bold.otf") format("opentype");
+    src: url("../assets/signika/Signika-Bold.ttf") format('truetype');
 }
