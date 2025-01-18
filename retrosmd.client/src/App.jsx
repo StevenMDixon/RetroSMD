@@ -5,7 +5,7 @@ import {
     Routes,
     Route
 } from "react-router-dom";
-import { Quote, Home, Services, Payment, About, OrderDetails } from './pages/'
+import { Quote, Main, Payment, About, OrderDetails } from './pages/'
 import Header from './modules/header';
 
 function App() {
@@ -15,9 +15,8 @@ function App() {
                 <Header />
                 <div className="AppContent">
                     <Routes >
-                        <Route path="/" element={<Services />} />
+                        <Route path="/" element={<Main />} />
                         <Route path="/Quote" element={<Quote />} />
-                        <Route path="/Services" element={<Services />} />
                         <Route path="/About" element={<About />} />
                         <Route path="/Pay" element={<Payment />} />
                         <Route path="/Order" element={<OrderDetails />} />

@@ -1,14 +1,12 @@
 import Quote from './quote'
-import Home from './home'
-import Services from './services'
+import Main from './main'
 import Payment from './payment'
 import About from './about'
 import OrderDetails from './orderdetails'
 
 export {
         Quote,
-        Home,
-        Services,
+        Main,
         Payment,
         About,
         OrderDetails

@@ -1,9 +1,9 @@
-﻿#root {
+﻿#root, body {
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
 .AppContent {
-    margin: 0em 1em;
+    width: 100%;
 }
