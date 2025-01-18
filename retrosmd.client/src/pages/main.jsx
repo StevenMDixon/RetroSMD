@@ -1,6 +1,6 @@
 import classes from '../styles/services.module.css';
 import Services from '../modules/services';
-import ServiceableConsoles from '../modules/servicibleconsoles';
+import ServiceableConsoles from '../modules/consoles';
 import About from '../modules/about';
 import SocialMedia from '../modules/socialmedia';
 import Footer from '../modules/footer';
