@@ -1,9 +1,12 @@
-﻿#root, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+﻿.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .AppContent {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    flex: 1;
 }

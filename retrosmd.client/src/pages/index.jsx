@@ -1,13 +1,13 @@
 import Quote from './quote'
 import Main from './main'
 import Payment from './payment'
-import About from './about'
+import Faq from './faq'
 import OrderDetails from './orderdetails'
 
 export {
         Quote,
         Main,
         Payment,
-        About,
+        Faq,
         OrderDetails
 }

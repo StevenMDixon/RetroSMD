@@ -1,14 +1,14 @@
-import classes from '../styles/services.module.css';
-import { Fragment } from 'react';
+import classes from '../styles/layout.module.css';
+import sClasses from '../styles/components/consoles.module.css';
+
 
 function ServiceableConsoles() {
     return (
-        <Fragment>
-            <div className={`${classes.Section} ${classes.ConsoleSection}`} >
+        <div className={`${classes.Section} ${classes.TextureBackGround} ${sClasses.ConsoleSection}`} >
                 <div>
                     <p className={classes.SectionTitle}>Consoles We Service</p>
                 </div>
-                <div className={classes.Consoles} >
+                <div className={`${sClasses.Consoles}`} >
                     <ul>
                         <li>Gameboy (GB, GBC, GBA, Micro)</li>
                         <li>NES</li>
@@ -27,9 +27,9 @@ function ServiceableConsoles() {
                         <li>PSP</li>
                         <li>PSVita</li>
                     </ul>
-                </div>
             </div>
-        </Fragment>
+            <p className={`${sClasses.TextCenter}`} >And more!</p>
+            </div>
     )
 }
 

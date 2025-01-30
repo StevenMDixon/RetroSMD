@@ -1,0 +1,58 @@
+.RepairSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.RepairSectionTitle {
+    
+}
+
+.RepairSteps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.RepairSteps  p {
+    flex: 1 1 50%;
+    padding: .5em;  
+    text-align: center;
+}
+
+.RepairSteps > div {
+   flex: 1 1 45%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   max-width: 40%;
+}
+
+.SectionContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .RepairSteps {
+        flex-direction: column;
+        width: 100%;
+    }
+
+        .RepairSteps > div {
+            max-width: 90%;
+        }
+}

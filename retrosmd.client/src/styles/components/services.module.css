@@ -1,0 +1,52 @@
+.Services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ServicesCard {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ServicesCardContent {
+    max-width: 400px;
+}
+
+.QuoteButton {
+    color: white;
+    border-radius: 6px;
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    font-weight: bold;
+    font-family: Signika-Bold;
+    font-size: 1.3em;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5793B;
+    margin-top: 3em;
+}
+
+.QuoteButton i {
+    font-size: 1.4em;
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    .ServicesCard {
+        flex: 1 1 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+
+    .ServicesCard {
+        flex: 1 1 100%;
+    }
+}

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,8 @@ namespace RetroSMD.Server.Models
         public required string Name { get; set; }
         public required string Description { get; set; }
         public required Decimal Price { get; set; }
+
+        //[ForeignKey("ServiceID")] 
         public required bool Available { get; set; }
     }
 }

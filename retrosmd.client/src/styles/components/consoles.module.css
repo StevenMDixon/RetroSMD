@@ -1,0 +1,44 @@
+.ConsoleSection {
+    padding: 1em;
+    color: white;
+    margin-top: 1.5em;
+}
+
+.Consoles {
+    padding-bottom: 1em;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.Consoles > ul {
+    max-width: 300px;
+    padding-inline-start: 0px;
+}
+
+.Consoles li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.TextCenter {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    .Consoles > ul {
+        flex: 1 1 20%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .Consoles > ul {
+        flex: 1 1 100%;
+        max-width: 400px;
+    }
+}

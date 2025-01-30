@@ -1,33 +1,52 @@
-import { useEffect, useState } from 'react';
 import classes from '../styles/quote.module.css';
+import { useEffect, useState } from 'react';
+
+import ModView from '../modules/quote/mod';
+import RepairView from '../modules/quote/repair';
+import DonateView from '../modules/quote/donate';
 
 function Quote() {
-    const [quotes, setQuotes] = useState();
+    const [selectedItems, setSelectedItems] = useState(["test"]);
+    const [selectedRoute, setSelectedRoute] = useState("repair");
 
-    useEffect(() => {
-        populateQuoteData();
-    }, []);
+    const displayItems = () => selectedItems.map((x, i) => <li key={i} >{x}</li>)
 
-    const contents = quotes === undefined
-        ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-        : <p></p>
+    const displayRoute = (addfn, list) => {
+        switch (selectedRoute) {
+            case "repair": return <RepairView addItem={addfn} Items={list} />
+            case "mod": return <ModView addItem={addfn} Items={list} />
+            case "donation": return <DonateView addItem={addfn} Items={list} />
+        }
+    }
 
+    const addItemToList = (item) => {
+        setSelectedItems([...selectedItems, item])
+    }
+
+    const removeItemFromList = (item) => {
+
+    }
+    
     return (
-        <div className={`${classes.quotecontent}`}>
-            <h1 id="tableLabel">Quotes</h1>
-            <p>This component demonstrates fetching data from a database.</p>
-            {contents}
+        <div className={`${classes._}`}>
+            <div>
+                <p>I want to:</p>
+                <select type="dropdown" value={selectedRoute} onChange={(e) => setSelectedRoute(e.target.value)}>
+                    <option value="repair">Get a quote for repair(s)</option>
+                    <option value="mod">Get a quote for Mod(s)</option>
+                    <option value="donation">Make a donation</option>
+                </select>
+            </div>
+
+            <div className="Cart Section">
+                {displayItems()}
+            </div>
+
+            {displayRoute(selectedRoute, addItemToList, setSelectedItems)}
         </div>
     );
 
-    async function populateQuoteData() {
-        const response = await fetch('/quotes');
-        if (response.status == 200) {
-            const data = await response.json();
-            console.log(data);
-            setQuotes(data);
-        }
-    }
+    function getItems() { }
 }
 
 export default Quote;

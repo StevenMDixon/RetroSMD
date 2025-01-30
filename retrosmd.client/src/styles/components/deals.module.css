@@ -1,0 +1,37 @@
+.DealCardWrapper {
+    margin-bottom: 1em;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.DealCard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #f79a6b;
+    background-color: #322d2d;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.DealCard i {
+    font-size: 2em;
+}
+
+@media only screen and (min-width: 852px) {
+    /* tablets and desktop */
+    .DealCard {
+        flex: 1 1 30%;
+        border-radius: 10px;
+        max-width: 250px;
+    }
+}
+
+@media only screen and (max-width: 851px) {
+    /* phones */
+    .DealCard {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+}

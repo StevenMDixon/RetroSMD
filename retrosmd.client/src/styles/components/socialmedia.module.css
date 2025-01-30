@@ -1,0 +1,24 @@
+.SocialMediaWrapper {
+    justify-content: space-around;
+    width: 30%;
+}
+
+.SocialMediaIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: #F5793B;
+}
+
+.SocialMediaWrapper i {
+    font-size: 4em;
+}
+
+.SocialMediaWrapper a {
+    color: #F5793B;
+}
+
+.SocialMediaWrapper a:visited {
+    color: #f79a6b;
+}

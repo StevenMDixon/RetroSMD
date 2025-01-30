@@ -5,8 +5,9 @@ import {
     Routes,
     Route
 } from "react-router-dom";
-import { Quote, Main, Payment, About, OrderDetails } from './pages/'
+import { Quote, Main, Faq, OrderDetails } from './pages/'
 import Header from './modules/header';
+import Footer from './modules/footer';
 
 function App() {
     return (
@@ -17,11 +18,11 @@ function App() {
                     <Routes >
                         <Route path="/" element={<Main />} />
                         <Route path="/Quote" element={<Quote />} />
-                        <Route path="/About" element={<About />} />
-                        <Route path="/Pay" element={<Payment />} />
+                        <Route path="/Faq" element={<Faq />} />
                         <Route path="/Order" element={<OrderDetails />} />
                     </Routes >
                 </div>
+                <Footer></Footer>
             </div>
         </Router>
     );
