@@ -12,12 +12,12 @@ namespace RetroSMD.Server.Models
         [ForeignKey("StatusID")]
         public required int StatusID { get; set; }
 
-        public QuoteStatus Status { get; set; }
+        public required QuoteStatus Status { get; set; }
 
         [ForeignKey("CustomerInfoID")]
         public required int CustomerInfoID { get; set; }
 
-        public CustomerInfo Customer { get; set; }
+        public required CustomerInfo Customer { get; set; }
 
         public required DateTime CreatedDate { get; set; }
     }

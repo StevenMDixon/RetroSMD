@@ -1,55 +1,63 @@
-Create Table quotestatus
+create Table quotestatus
 (
-	StatusID Serial Primary Key,
-	Name VARCHAR(255)
+	statusid Serial Primary Key,
+	name VARCHAR(255)
 );
 
 Create Table customerinfo
 (
-	CustomerInfoID Serial Primary Key,
-	Name VARCHAR(255),
-	Address VARCHAR(255),
-	Email VARCHAR(255),
-	Phone VARCHAR(255)
+	customerinfoid Serial Primary Key,
+	name VARCHAR(255),
+	email VARCHAR(255),
+	phone VARCHAR(255)
 );
 
-CREATE TABLE SERVICETYPE (
-	SERVICETYPEID SERIAL PRIMARY KEY,
-	NAME VARCHAR(255)
+CREATE TABLE types (
+	typeid SERIAL PRIMARY KEY,
+	name VARCHAR(255)
 );
 
-CREATE TABLE SERVICECATEGORY (
-	SERVICECATEGORYID SERIAL PRIMARY KEY,
-	NAME VARCHAR(255)
+CREATE TABLE consoles (
+	consoleid SERIAL PRIMARY KEY,
+	name VARCHAR(255)
 );
 
-CREATE TABLE SERVICEPLATFORM (
-	SERVICEPLATFORMID SERIAL PRIMARY KEY,
-	NAME VARCHAR(255)
+CREATE TABLE categories (
+	categoryid SERIAL PRIMARY KEY,
+	name VARCHAR(255)
 );
 
-CREATE TABLE SERVICES (
-	SERVICEID SERIAL PRIMARY KEY,
-	NAME VARCHAR(255),
-	DESCRIPTION VARCHAR(255),
-	PRICE MONEY,
-	SERCIVETYPEID INT,
-	SERVICECATEGORYID INT,
-	SERVICEPLATFORMID INT,
-	AVAILABLE BOOLEAN
+CREATE TABLE platforms (
+	platformid SERIAL PRIMARY KEY,
+	name VARCHAR(255)
 );
 
 Create Table quotes
 (
-	QuoteID Serial Primary key,
-	StatusID Int references QuoteStatus(StatusID),
-	CustomerInfoID Int references CustomerInfo(CustomerInfoID),
-	CreatedDate Date
+	quoteid Serial Primary key,
+	statusid Int references quotestatus(StatusID),
+	customerinfoid Int references customerinfo(CustomerInfoID),
+	createddate Date
 );
 
-Create Table quoteservices
+CREATE TABLE services (
+	serviceid SERIAL PRIMARY KEY,
+	name VARCHAR(255),
+	description VARCHAR(1000),
+	price MONEY,
+	typeid INT references types(typeid),
+	categoryid INT references categories(categoryid),
+	consoleid INT references consoles(consoleid),
+	platformid INT references platforms(platformid),
+	available BOOLEAN
+);
+
+create table quoteservices
 (
-	QuoteServiceID Serial Primary Key,
-	ServiceID int references Services(ServiceID),
-	QuoteID int references Quotes(QuoteID)
+	quoteserviceid Serial primary key,
+	quoteid int references quotes(quoteid),
+	serviceid int references services(serviceid),
+	description VARCHAR(255),
+	customernotes Text,
+	price MONEY
 );

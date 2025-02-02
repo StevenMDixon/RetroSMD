@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using RetroSMD.Server.Context;
 using RetroSMD.Server.Models;
+using System.ComponentModel;
 
 namespace RetroSMD.Server.Controllers
 {
@@ -25,7 +26,7 @@ namespace RetroSMD.Server.Controllers
 
         // GET: api/QuoteServices/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<QuoteServices>> GetQuoteServices(string id)
+        public async Task<ActionResult<QuoteServices>> GetQuoteServices(int id)
         {
             var quoteServices = await _context.quoteServices.FindAsync(id);
 
@@ -40,7 +41,7 @@ namespace RetroSMD.Server.Controllers
         // PUT: api/QuoteServices/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutQuoteServices(string id, QuoteServices quoteServices)
+        public async Task<IActionResult> PutQuoteServices(int id, QuoteServices quoteServices)
         {
             if (id != quoteServices.QuoteServiceID)
             {
@@ -95,7 +96,7 @@ namespace RetroSMD.Server.Controllers
 
         // DELETE: api/QuoteServices/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteQuoteServices(string id)
+        public async Task<IActionResult> DeleteQuoteServices(int id)
         {
             var quoteServices = await _context.quoteServices.FindAsync(id);
             if (quoteServices == null)
@@ -109,7 +110,7 @@ namespace RetroSMD.Server.Controllers
             return NoContent();
         }
 
-        private bool QuoteServicesExists(string id)
+        private bool QuoteServicesExists(int id)
         {
             return _context.quoteServices.Any(e => e.QuoteServiceID == id);
         }

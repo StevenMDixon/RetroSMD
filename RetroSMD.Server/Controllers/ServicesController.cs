@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RetroSMD.Server.Context;
 using RetroSMD.Server.Models;
@@ -25,14 +20,23 @@ namespace RetroSMD.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Services>>> GetServices()
         {
-            return await _context.services.ToListAsync();
+            return await _context.services
+                .Include(t => t.Category)
+                .Include(t => t.Type)
+                .Include(t => t.Platform)
+                .Include(t => t.Console)
+                .ToListAsync();
         }
 
         // GET: api/Services/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Services>> GetServices(string id)
+        public async Task<ActionResult<Services>> GetServices(int id)
         {
-            var services = await _context.services.FindAsync(id);
+            var services = _context.services.Include(t => t.Category)
+                .Include(t => t.Type)
+                .Include(t => t.Platform)
+                .Include(t => t.Console)
+                .FirstOrDefault(t => t.ServiceID == id);
 
             if (services == null)
             {
@@ -45,7 +49,7 @@ namespace RetroSMD.Server.Controllers
         // PUT: api/Services/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutServices(string id, Services services)
+        public async Task<IActionResult> PutServices(int id, Services services)
         {
             if (id != services.ServiceID)
             {
@@ -100,7 +104,7 @@ namespace RetroSMD.Server.Controllers
 
         // DELETE: api/Services/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteServices(string id)
+        public async Task<IActionResult> DeleteServices(int id)
         {
             var services = await _context.services.FindAsync(id);
             if (services == null)
@@ -114,7 +118,7 @@ namespace RetroSMD.Server.Controllers
             return NoContent();
         }
 
-        private bool ServicesExists(string id)
+        private bool ServicesExists(int id)
         {
             return _context.services.Any(e => e.ServiceID == id);
         }

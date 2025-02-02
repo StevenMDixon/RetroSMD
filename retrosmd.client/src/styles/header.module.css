@@ -99,20 +99,22 @@
 }
 
 .showHamburger {
+    visibility: visible;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: .5em;
+    margin-right: .7em;
 }
 
 .showHamburger > a {
     margin: .3em;
 }
 
-.hideHamburger{
+.hideHamburger {
+    visibility: hidden;
     display: none;
 }
 
 .hamburgnavi {
-    transition: 5s ease;
+    transition: visibility 100ms ease;
 }

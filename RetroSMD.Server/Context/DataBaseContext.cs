@@ -16,5 +16,11 @@ namespace RetroSMD.Server.Context
         public DbSet<RetroSMD.Server.Models.CustomerInfo> customerInfo { get; set; } 
         public DbSet<RetroSMD.Server.Models.Services> services { get; set; }
         public DbSet<RetroSMD.Server.Models.QuoteServices> quoteServices { get; set; }
+
+        public DbSet<RetroSMD.Server.Models.Categories> categories { get; set; }
+        public DbSet<RetroSMD.Server.Models.Platforms> Platforms { get; set; }
+        public DbSet<RetroSMD.Server.Models.Consoles> Consoles { get; set; }
+        public DbSet<RetroSMD.Server.Models.Types> Types { get; set; }
+
     }
 }

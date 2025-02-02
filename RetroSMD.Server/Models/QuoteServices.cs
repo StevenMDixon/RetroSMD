@@ -6,12 +6,12 @@ namespace RetroSMD.Server.Models
     public class QuoteServices
     {
         [Key]
-        public required string QuoteServiceID { get; set; }
+        public required int QuoteServiceID { get; set; }
         [ForeignKey("QuoteID")]
-        public required string QuoteID { get; set; }
-        public Quotes Quote { get; set; }
+        public required int QuoteID { get; set; }
+        public required Quotes Quote { get; set; }
         [ForeignKey("ServiceID")]
-        public required string ServiceID { get; set; }
-        public Services Service { get; set; }
+        public required int ServiceID { get; set; }
+        public required Services Service { get; set; }
     }
 }

@@ -49,6 +49,14 @@ export default defineConfig({
             '^/quotes': {
                 target,
                 secure: false
+            },
+            '^/services': {
+                target,
+                secure: false
+            },
+            '^/consoles': {
+                target,
+                secure: false
             }
         },
         port: 5173,

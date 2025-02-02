@@ -17,7 +17,7 @@ function Services() {
 
                     <div className={`${sClasses.ServicesCardContent}`}>
                         <p>Not able to save? Cartridge no longer reading?</p>
-                        <p>We can replace batteries or even doing component level replacements!</p>
+                        <p>We can replace batteries or even do component level repairs!</p>
                     </div>
                 </div>
                 <div className={`${sClasses.ServicesCard}`}>
@@ -47,7 +47,7 @@ function Services() {
                     </div>
                     <div className={`${sClasses.ServicesCardContent}`}>
                         <p>Need to add a little modern drip to your retro systems?</p>
-                        <p>We will profesionally install new/replacment shells for most retro games systems!</p>
+                        <p>We will profesionally install new/replacement shells for most retro games systems!</p>
                     </div>
                 </div>
             </div>
