@@ -32,7 +32,8 @@ namespace RetroSMD.Server.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Services>> GetServices(int id)
         {
-            var services = _context.services.Include(t => t.Category)
+            var services = _context.services
+                .Include(t => t.Category)
                 .Include(t => t.Type)
                 .Include(t => t.Platform)
                 .Include(t => t.Console)

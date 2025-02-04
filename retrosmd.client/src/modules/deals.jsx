@@ -18,7 +18,7 @@ function Deals(){
                         <i className='bx bxs-offer'></i>
                         <p className={`${classes.SectionSubTitle}`} >Free Diagnostics</p>
                     </div>
-                    <p>Send in 5 carts and only pay for 4</p>
+                    <p>Don&apos;t know whats wrong with your system? No problem we willl diagnose the issue!</p>
                 </div>
                 <div className={sClasses.DealCard} >
                     <div className={`${classes.SectionTitleWrapper}`} >
