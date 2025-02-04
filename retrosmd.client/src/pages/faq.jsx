@@ -13,7 +13,8 @@ function About() {
                     </div>
                     <div className={`${sClasses.RepairSteps}`}>
                         <div>
-                            <p>1. Start a quote, select your desired mod(s) or repair(s) and fill out the necessary info. We will provide you with an initial price and follow up with you via email.</p>
+                            <p>1. Reach out to us via email, include information about the items you want serviced. We will follow up with you and provide and initial price.</p>
+                            {/*<p>1. Start a quote, select your desired mod(s) or repair(s) and fill out the necessary info. We will provide you with an initial price and follow up with you via email.</p>*/}
                         </div>
 
                         <div>
@@ -56,7 +57,7 @@ function About() {
                         <p className={`${classes.SectionSubTitle}`}>Do you have a physical store?</p>
                     </div>
                     <div className={`${sClasses.SectionContent}`}>
-                        <p>Currently, we operate exclusively online.</p>
+                        <p>No, we operate exclusively online.</p>
                     </div>
                 </div>
 

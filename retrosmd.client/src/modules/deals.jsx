@@ -15,7 +15,14 @@ function Deals(){
                 </div>
                 <div className={sClasses.DealCard} >
                     <div className={`${classes.SectionTitleWrapper}`} >
-                        <i className='bx bxs-badge-dollar'></i>
+                        <i className='bx bxs-offer'></i>
+                        <p className={`${classes.SectionSubTitle}`} >Free Diagnostics</p>
+                    </div>
+                    <p>Send in 5 carts and only pay for 4</p>
+                </div>
+                <div className={sClasses.DealCard} >
+                    <div className={`${classes.SectionTitleWrapper}`} >
+                        <i className='bx bxs-offer'></i>
                         <p className={`${classes.SectionSubTitle}`} >Trade-in program</p>
                     </div>
                     <p>Send in retro broken/working consoles or games and get a discount on services</p>

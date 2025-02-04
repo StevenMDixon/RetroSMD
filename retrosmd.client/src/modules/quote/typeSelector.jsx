@@ -4,9 +4,9 @@ const TypeSelector = ({ classes,  selectedPlatform, moveToNextStep, setSelectedT
         <div className={classes.TypeSelector} > 
             {selectedPlatform != "Donation" && <p>I want to:</p>}
             {selectedPlatform != "Donation" &&
-                ["Install a Mod", "Get a repair"].map((type, i) => (
-                    <div key={type + i} onClick={() => moveToNextStep(setSelectedType, type)} >
-                        <p>{type}</p>
+                [{ text: "Install a Mod", value:"Mod"}, { text: "Get a repair", value:"Repair"}].map((type, i) => (
+                    <div key={i} onClick={() => moveToNextStep(setSelectedType, type.value)} >
+                        <p>{type.text}</p>
                     </div>
                 ))
             }

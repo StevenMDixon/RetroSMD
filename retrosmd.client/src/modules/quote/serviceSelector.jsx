@@ -7,8 +7,9 @@ const ServiceSelector = ({ classes, options, setSelected, moveToNextStep }) => {
             <p>Select some services!</p>
             {
                 options.map((service) => (
-                    <div key={service.serviceid} className={classes.platformCard} >
-                        <p>{service.name}</p>
+                    <div key={service.serviceid}>
+                        <input type="checkbox"  className={classes.serviceoption} name={service.name} value={service.name} ></input>
+                        <label htmlFor={service.name} >{service.name}</label>
                     </div>
                 ))
             }

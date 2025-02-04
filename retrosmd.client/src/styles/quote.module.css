@@ -6,3 +6,21 @@
     /* phones */
    
 }
+
+
+.quoteBody {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.quoteBody > p {
+    max-width: 80%;
+}
+
+.quoteBodyHeader {
+    color: #f79a6b;
+    font-weight: bold;
+    font-size: 1.2em;
+}
