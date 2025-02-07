@@ -6,7 +6,7 @@ function Deals(){
         <div className={`${classes.Section}`} >
             <p className={classes.SectionTitle}>Current Specials</p>
             <div className={`${classes.SectionContentWrapperFlex} ${sClasses.DealCardWrapper}`} >
-                <div className={sClasses.DealCard} >
+                <div className={`${sClasses.DealCard} styled-bg`}>
                     <div className={`${classes.SectionTitleWrapper}`} >
                         <i className='bx bxs-offer'></i>
                         <p className={`${classes.SectionSubTitle}`} >Battery replacements</p>

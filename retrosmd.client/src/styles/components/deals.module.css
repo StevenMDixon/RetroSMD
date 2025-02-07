@@ -2,17 +2,22 @@
     margin-bottom: 1em;
     width: 100%;
     justify-content: space-evenly;
+
 }
 
 .DealCard {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    color: #f79a6b;
-    background-color: #322d2d;
+    color: white;
     align-items: center;
     text-align: center;
     padding: 1em;
+    background: linear-gradient(0deg, rgba(23, 22, 22, 0.90), rgba(23, 22, 22, 0.90)), url('../assets/folk-pattern.webp');
+    background-attachment: fixed;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .DealCard i {

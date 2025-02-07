@@ -4,7 +4,7 @@ import sClasses from '../styles/components/consoles.module.css';
 
 function ServiceableConsoles() {
     return (
-        <div className={`${classes.Section} ${classes.TextureBackGround} ${sClasses.ConsoleSection}`} >
+        <div className={`${classes.Section} styled-bg ${sClasses.ConsoleSection}`} >
                 <div>
                     <p className={classes.SectionTitle}>Consoles We Service</p>
                 </div>

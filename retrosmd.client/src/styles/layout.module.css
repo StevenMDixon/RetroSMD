@@ -49,14 +49,6 @@
     margin: 1em;
 }
 
-.TextureBackGround {
-    background: linear-gradient(0deg, rgba(50,45,45, 0.90), rgba(50,45,45, 0.90)), url('../assets/pattern_japanese-pattern-3_1.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .About {
     text-align: center;
     display: flex;

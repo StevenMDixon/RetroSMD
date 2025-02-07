@@ -1,14 +1,7 @@
 .headercontent {
-    background-color: #685d5d;
-    /*background-image: */
-    background: linear-gradient(0deg, rgba(50,45,45, 0.90), rgba(50,45,45, 0.90)), url('../assets/pattern_japanese-pattern-3_1.png');
     display: flex;
     flex-direction: column;
     box-shadow: 0px 3px 3px #808080;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .headerwrapper {

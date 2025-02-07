@@ -29,3 +29,11 @@ body {
     font-weight: bold;
     src: url("../assets/signika/Signika-Bold.ttf") format('truetype');
 }
+
+.styled-bg {
+    background: linear-gradient(0deg, rgba(23, 22, 22, 0.90), rgba(23, 22, 22, 0.90)), url('../assets/folk-pattern.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

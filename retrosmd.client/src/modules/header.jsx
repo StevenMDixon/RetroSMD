@@ -9,7 +9,7 @@ function Header({ open, setOpen, innerRef }) {
     //const isBigScreen = useMediaQuery({ query: '(min-width: 768px)' })
     //const isTabletOrMobile = useMediaQuery({ query: '(max-width: 767px)' })
     return (
-        <div className={`${classes.headercontent}`} ref={innerRef}>
+        <div className={`${classes.headercontent} styled-bg`} ref={innerRef}>
             <div className={`${classes.headerwrapper}`}>
                 <svg width="390" height="66.2867474496984" viewBox="0 0 409 69.51610181263241">
                    
