@@ -1,12 +1,12 @@
-import classes from '../styles/layout.module.css';
-import sClasses from '../styles/components/deals.module.css';
+import classes from '../../styles/layout.module.css';
+import sClasses from '../../styles/components/deals.module.css';
 
 function Deals(){
     return(
         <div className={`${classes.Section}`} >
             <p className={classes.SectionTitle}>Current Specials</p>
             <div className={`${classes.SectionContentWrapperFlex} ${sClasses.DealCardWrapper}`} >
-                <div className={`${sClasses.DealCard} styled-bg`}>
+                <div className={`${sClasses.DealCard}`}>
                     <div className={`${classes.SectionTitleWrapper}`} >
                         <i className='bx bxs-offer'></i>
                         <p className={`${classes.SectionSubTitle}`} >Battery replacements</p>

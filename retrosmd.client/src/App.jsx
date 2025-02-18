@@ -5,7 +5,7 @@ import {
     Routes,
     Route
 } from "react-router-dom";
-import { Quote, Main, Faq, OrderDetails } from './pages/'
+import { Quote, Main, Faq, OrderDetails, Services } from './pages/'
 import Header from './modules/header';
 import Footer from './modules/footer';
 
@@ -17,6 +17,7 @@ function App() {
                 <div className="AppContent">
                     <Routes >
                         <Route path="/" element={<Main />} />
+                        <Route path="/Services" element={<Services />} />
                         <Route path="/Quote" element={<Quote />} />
                         <Route path="/Faq" element={<Faq />} />
                         <Route path="/Order" element={<OrderDetails />} />

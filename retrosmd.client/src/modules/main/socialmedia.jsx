@@ -1,5 +1,5 @@
-import classes from '../styles/layout.module.css';
-import sClasses from '../styles/components/socialmedia.module.css';
+import classes from '../../styles/layout.module.css';
+import sClasses from '../../styles/components/socialmedia.module.css';
 
 function SocialMedia() {
     return (

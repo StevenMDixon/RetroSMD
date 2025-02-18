@@ -1,5 +1,5 @@
-import classes from '../styles/layout.module.css';
-import sClasses from '../styles/components/services.module.css';
+import classes from '../../styles/layout.module.css';
+import sClasses from '../../styles/components/services.module.css';
 import { Link } from 'react-router-dom';
 
 function Services() {
@@ -50,8 +50,21 @@ function Services() {
                         <p>We will profesionally install new/replacement shells for most retro games systems!</p>
                     </div>
                 </div>
+                <div className={`${sClasses.ServicesCard}`}>
+                    <div className={`${classes.SectionTitleWrapper}`} >
+                        <i className='bx bx-printer'></i>
+                        <p className={`${classes.SectionSubTitle}`}>3D Printing</p>
+                    </div>
+                    <div className={`${sClasses.ServicesCardContent}`}>
+                        <p>Need a mod printed?</p>
+                        <p>We can 3D print those and install them profesionally if needed!</p>
+                    </div>
+                </div>
             </div>
-            <Link className={`${sClasses.QuoteButton}`} to="/Quote">GET A QUOTE<i className='bx bx-right-arrow-alt'></i></Link>
+            <div className={`${sClasses.ServicesLinks}`}>
+                <Link className={`${sClasses.QuoteButton}`} to="/Services">VIEW MORE<i className='bx bx-right-arrow-alt'></i></Link>
+                {/*<Link className={`${sClasses.QuoteButton}`} to="/Quote">GET A QUOTE<i className='bx bx-right-arrow-alt'></i></Link>*/}
+            </div>
             </div>
     )
 };

@@ -11,7 +11,7 @@ function About() {
                         <i className='bx bxs-wrench'></i>
                         <p className={`${classes.SectionSubTitle}`}>How does the repair process work?</p>
                     </div>
-                    <div className={`${sClasses.RepairSteps}`}>
+                    <div className={`${sClasses.RepairSteps} ${sClasses.SectionOutlined}`}>
                         <div>
                             <p>1. Reach out to us via email, include information about the items you want serviced. We will follow up with you and provide and initial price.</p>
                             {/*<p>1. Start a quote, select your desired mod(s) or repair(s) and fill out the necessary info. We will provide you with an initial price and follow up with you via email.</p>*/}
@@ -40,7 +40,7 @@ function About() {
                         <i className='bx bxs-calendar' ></i>
                         <p className={`${classes.SectionSubTitle}`}>What is the turn around time on services?</p>
                     </div>
-                    <div className={`${sClasses.SectionContent}`}>
+                    <div className={`${sClasses.SectionContent} ${sClasses.SectionOutlined}`}>
                         <p>The turn around time can vary based on many things:</p>
                         <ul>
                             <li>Shipping times, unfortunately we do not control the shipping services. If a repair is urgent you can upgrade the shipping with your carrier.</li>
@@ -56,7 +56,7 @@ function About() {
                         <i className='bx bx-store-alt' ></i>
                         <p className={`${classes.SectionSubTitle}`}>Do you have a physical store?</p>
                     </div>
-                    <div className={`${sClasses.SectionContent}`}>
+                    <div className={`${sClasses.SectionContent} ${sClasses.SectionOutlined}`}>
                         <p>No, we operate exclusively online.</p>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ function About() {
                         <i className='bx bx-disc' ></i>
                         <p className={`${classes.SectionSubTitle}`}>Do you do disc resurfacing?</p>
                     </div>
-                    <div className={`${sClasses.SectionContent}`}>
+                    <div className={`${sClasses.SectionContent} ${sClasses.SectionOutlined}`}>
                         <p>Not currently, it is something we are looking into.</p>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ function About() {
                         <i className='bx bx-memory-card' ></i>
                         <p className={`${classes.SectionSubTitle}`}>Do you do soft mods like installing cfw?</p>
                     </div>
-                    <div className={`${sClasses.SectionContent}`}>
+                    <div className={`${sClasses.SectionContent} ${sClasses.SectionOutlined}`}>
                         <p>We do not. However, we can do things like installing swiss or FreeMcboot on user provided memory cards.</p>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ function About() {
                         <i className='bx bx-notepad'></i>
                         <p className={`${classes.SectionSubTitle}`}>Do you offer a warranty on your work?</p>
                     </div>
-                    <div className={`${sClasses.SectionContent}`}>
+                    <div className={`${sClasses.SectionContent} ${sClasses.SectionOutlined}`}>
                         <p>Yes, If a repair or mod is unsatisfactory, reach out to us at <a href="Mailto:Support@RetroSMD.com">Support@RetroSMD.com</a> with your order number and we will follow up. Most Repairs are covered under a 90 day limited warranty.</p>
 
                         <div hidden={true}>
@@ -120,7 +120,7 @@ function About() {
                         <i className='bx bx-gift' ></i>
                         <p className={`${classes.SectionSubTitle}`}>Do you accept donations?</p>
                     </div>
-                    <div className={`${sClasses.SectionContent}`}>
+                    <div className={`${sClasses.SectionContent} ${sClasses.SectionOutlined}`}>
                         <p>Yes! We accept donatations of games, game consoles, and electronics in varying conditions! Our mission is to keep these awesome pieces of tech out of dumps, so we will work to fix them up and find them a home. We will be donating 50% of all the profits from donations to <a className="linkinline" href="https://girlswhocode.com/about-us">Girls who code</a> for 2025.</p>
                         <p>If you are interested in donating use our quoting page and select &quot;I would like to make a donation&quot;.</p>
                     </div>

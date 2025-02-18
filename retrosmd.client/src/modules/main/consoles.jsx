@@ -1,5 +1,6 @@
-import classes from '../styles/layout.module.css';
-import sClasses from '../styles/components/consoles.module.css';
+import classes from '../../styles/layout.module.css';
+import sClasses from '../../styles/components/consoles.module.css';
+import { Link } from 'react-router-dom';
 
 
 function ServiceableConsoles() {
@@ -29,6 +30,7 @@ function ServiceableConsoles() {
                     </ul>
             </div>
             <p className={`${sClasses.TextCenter}`} >And more!</p>
+            <Link className={`${sClasses.QuoteButton}`} to="/Quote">GET A QUOTE<i className='bx bx-right-arrow-alt'></i></Link>
             </div>
     )
 }

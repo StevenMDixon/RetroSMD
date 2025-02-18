@@ -22,6 +22,12 @@
     color: #f79a6b;
 }
 
+.SectionSubTitleWhite {
+    font-size: 1.2em;
+    font-family: Signika-Bold;
+    color: white;
+}
+
 .Section {
     display: flex;
     flex-wrap: wrap;

@@ -28,6 +28,24 @@
     text-align: center;
 }
 
+.QuoteButton {
+    color: white;
+    border-radius: 6px;
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    font-weight: bold;
+    font-family: Signika-Bold;
+    font-size: 1.3em;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5793B;
+    margin-top: 3em;
+}
+
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
     .Consoles > ul {

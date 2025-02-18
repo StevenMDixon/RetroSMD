@@ -1,10 +1,12 @@
 import classes from '../styles/header.module.css';
 import { Link, useLocation } from 'react-router-dom';
-/*import { useEffect, useState} from 'react';*/
+import { useEffect, useState} from 'react';
 import withClickOutside from './withClickOutSide';
 
 function Header({ open, setOpen, innerRef }) {
     const location = useLocation();
+
+    /*if (open) setOpen(false)*/
 
     //const isBigScreen = useMediaQuery({ query: '(min-width: 768px)' })
     //const isTabletOrMobile = useMediaQuery({ query: '(max-width: 767px)' })
@@ -20,7 +22,10 @@ function Header({ open, setOpen, innerRef }) {
                     </g>
                 </svg>
                 <div className={`${classes.hamburger}`}>
-                    <i className='bx bx-menu' onClick={toggleHamburger}></i>
+                            {open ?
+                            <i key="1" className='bx bx-x' onClick={toggleHamburger}></i>:
+                            <i key="2" className='bx bx-menu' onClick={toggleHamburger}></i>
+                            }
                 </div>
                 <LargeNavigation />
             </div>
@@ -41,6 +46,7 @@ function Header({ open, setOpen, innerRef }) {
         return (
             <div className={`${classes.navi} ${classes.navigationItems}`}>
                 <Link className={isActive(location.pathname, "/") ? classes.Active : ""} to="/">HOME</Link>
+                <Link className={isActive(location.pathname, "/Services") ? classes.Active : ""} to="/Services">SERVICES</Link>
                 <Link className={isActive(location.pathname, "/Faq") ? classes.Active : ""} to="/Faq">FAQs</Link>
                 <Link className={isActive(location.pathname, "/Quote") ? classes.Active : ""} to="/Quote">GET A QUOTE</Link>
             </div>
@@ -51,6 +57,7 @@ function Header({ open, setOpen, innerRef }) {
         return (
             <div className={`${classes.hamburgnavi} ${classes.navigationItems} ${open ? classes.showHamburger : classes.hideHamburger}`}>
                 <Link className={isActive(location.pathname, "/") ? classes.Active : ""} to="/">HOME</Link>
+                <Link className={isActive(location.pathname, "/Services") ? classes.Active : ""} to="/Services">SERVICES</Link>
                 <Link className={isActive(location.pathname, "/Faq") ? classes.Active : ""} to="/Faq">FAQs</Link>
                 <Link className={isActive(location.pathname, "/Quote") ? classes.Active : ""} to="/Quote">GET A QUOTE</Link>
             </div>

@@ -2,7 +2,6 @@
     margin-bottom: 1em;
     width: 100%;
     justify-content: space-evenly;
-
 }
 
 .DealCard {
@@ -13,11 +12,8 @@
     align-items: center;
     text-align: center;
     padding: 1em;
-    background: linear-gradient(0deg, rgba(23, 22, 22, 0.90), rgba(23, 22, 22, 0.90)), url('../assets/folk-pattern.webp');
-    background-attachment: fixed;
-    background-position:top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+
 }
 
 .DealCard i {
@@ -30,6 +26,11 @@
         flex: 1 1 30%;
         border-radius: 10px;
         max-width: 250px;
+        background: linear-gradient(0deg, rgba(23, 22, 22, 0.9), rgba(23, 22, 22, 0.9)), url('../../assets/folk-pattern.webp');
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -38,5 +39,13 @@
     .DealCard {
         width: 100%;
         flex: 1 1 100%;
+    }
+
+    .DealCardWrapper {
+        background: linear-gradient(0deg, rgba(23, 22, 22, 0.90), rgba(23, 22, 22, 0.90)), url('../../assets/folk-pattern.webp');
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
