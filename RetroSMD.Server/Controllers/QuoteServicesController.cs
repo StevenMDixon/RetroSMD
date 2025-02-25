@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace RetroSMD.Server.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class QuoteServicesController : ControllerBase
     {
