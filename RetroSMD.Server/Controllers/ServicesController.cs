@@ -5,7 +5,7 @@ using RetroSMD.Server.Models;
 
 namespace RetroSMD.Server.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ServicesController : ControllerBase
     {
