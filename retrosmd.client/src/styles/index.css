@@ -37,3 +37,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.LogoWrapper {
+    width: 100%;
+    min-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}

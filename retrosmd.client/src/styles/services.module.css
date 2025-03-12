@@ -51,6 +51,24 @@
     align-content: center;
     align-items: center;
     justify-content: center;
+    padding-bottom: 10em;
+}
+
+.DropDownWrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.PriceLineWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: space-between;
+    justify-content: space-between;
+    border-bottom: 1px dotted;
 }
 
 @media only screen and (min-width: 768px) {
@@ -61,11 +79,19 @@
         margin: 1em;
         width: 90%;
     }
+
+    .PriceWrapper {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     /* phones */
     .ServiceWrapper {
         flex-direction: column;
+    }
+
+    .PriceWrapper {
+        width: 80%;
     }
 }
