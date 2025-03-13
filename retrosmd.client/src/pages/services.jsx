@@ -159,7 +159,7 @@ function Services() {
 
 
             <p className={`${classes.SectionTitle}`}>Pricing: </p>
-            <p>Please not that these prices do not include parts unless otherwise noted!</p>
+            <p>Please note that these prices do not include parts unless otherwise noted!</p>
             <div className={sClasses.DropDownWrapper} >
                 <label htmlFor="console">Console</label>
                 <select id="console" value={selectedSystem} onChange={handleSytemChange}>
