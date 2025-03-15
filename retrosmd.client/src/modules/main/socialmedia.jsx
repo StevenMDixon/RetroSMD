@@ -9,8 +9,7 @@ function SocialMedia() {
             </div>
             <div className={`${classes.SectionContentWrapperFlex} ${sClasses.SocialMediaWrapper}`}>
                 <div className={`${sClasses.SocialMediaIcon}`}>
-                    <a target="_blank" href="https://twitter.com/@RetroSMD"><i className='bx bxl-twitter'></i></a>
-                    <p>@RetroSMD</p>
+                    <a target="_blank" href="https://twitter.com/@RetroSMD"><i className='bx bxl-twitter'></i><p>@RetroSMD</p></a>
                 </div>
                 {/*<div className={`${sClasses.SocialMediaIcon}`}>*/}
                 {/*    <a target="_blank" href="https://www.youtube.com/@RetroSMD"><i className='bx bxl-youtube'></i></a>*/}
@@ -21,8 +20,11 @@ function SocialMedia() {
                 {/*    <p>retrosmd</p>*/}
                 {/*</div>*/}
                 <div className={`${sClasses.SocialMediaIcon}`}>
-                    <a target="_blank" href="https://www.ebay.com/sch/i.html?_trksid=p3692&_ssn=retrosmd"><i className='bx bxl-ebay' ></i></a>
-                    <p>RetroSMD</p>
+                    <a target="_blank" href="https://www.ebay.com/sch/i.html?_trksid=p3692&_ssn=retrosmd"><i className='bx bxl-ebay' ></i><p>RetroSMD</p></a>
+                </div>
+                <div className={`${sClasses.SocialMediaIcon}`}>
+                    <a target="_blank" href="https://www.facebook.com/people/Retrosmd-LLC/61574181688793/"><i className='bx bxl-facebook' ></i><p>RetroSMD</p></a>
+                    
                 </div>
             </div>
         </div>
