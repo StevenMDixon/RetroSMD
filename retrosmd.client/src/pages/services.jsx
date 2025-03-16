@@ -176,9 +176,9 @@ function Services() {
 }
 
 const Pricing = ({ items, system }) => {
-    const displayItems = items.filter(x => x.System == system || system == "" || x.System == "All")
+    const displayItems = items.filter(x => x.System == system || system == "" || x.System == "All" || system == "All")
 
-    const displayConsole = system == "All"
+    const displayConsole = system == "All" || system == ''
 
     const displaySystem = (x) => !x.name.includes("Gameboy") && !x.System.includes("All")
 
